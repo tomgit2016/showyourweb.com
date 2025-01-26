@@ -35,3 +35,45 @@ button:hover {
   width: 100%;
   height: 100%;
 }
+
+/* Mobile Menu Styles */
+.mobile-menu-button {
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-button.active {
+  transform: rotate(90deg);
+}
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#mobile-menu.active {
+  right: 0;
+}
+
+#mobile-menu a {
+  display: block;
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+#mobile-menu a:hover {
+  background-color: #f9fafb;
+}
+
+@media (min-width: 768px) {
+  #mobile-menu {
+    display: none !important;
+  }
+}
