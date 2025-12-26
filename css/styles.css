@@ -104,6 +104,10 @@ button:hover {
   transition: transform 0.2s ease;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Responsive iframe for Google Maps */
 .map-container {
   position: relative;
