@@ -1,6 +1,73 @@
 /* Custom styles for ShowYourWeb */
+:root {
+  --font-body: "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Fraunces", "Georgia", "Times New Roman", serif;
+  --color-bg: #f4f1ea;
+  --color-surface: #fffcf7;
+  --color-text: #1e2a35;
+  --color-muted: #50616d;
+  --color-primary: #0f6c6c;
+  --color-primary-strong: #0a5252;
+  --color-accent: #b85c3c;
+  --color-focus: rgba(15, 108, 108, 0.4);
+  --color-border: #e3d8c8;
+  --color-highlight: #fbf6ef;
+  --shadow-soft: 0 10px 26px rgba(13, 44, 44, 0.14);
+  --shadow-card: 0 22px 44px rgba(13, 44, 44, 0.18);
+  --shadow-nav: 0 12px 30px rgba(13, 44, 44, 0.16);
+  --body-texture: radial-gradient(circle at top left, rgba(15, 108, 108, 0.08), transparent 45%),
+    radial-gradient(circle at 10% 60%, rgba(184, 92, 60, 0.08), transparent 50%),
+    linear-gradient(180deg, #fbf7f0 0%, #f1ede5 60%, #f4f1ea 100%);
+  --surface-texture: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 252, 247, 0.96)),
+    repeating-linear-gradient(120deg, rgba(15, 108, 108, 0.04) 0, rgba(15, 108, 108, 0.04) 1px, transparent 1px, transparent 12px);
+}
+
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  background-image: var(--body-texture);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.site-nav {
+  background-color: var(--color-surface) !important;
+  box-shadow: var(--shadow-nav) !important;
+  border-bottom: 1px solid var(--color-border);
+  background-image: none;
+}
+
+.site-brand {
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #0d5e5b, #b85c3c) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 32px rgba(5, 18, 18, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.45);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, var(--color-primary-strong), var(--color-accent)) !important;
+  transform: translateY(-1px);
+}
+
+
+.section-panel {
+  background-color: var(--color-highlight);
+  background-image: var(--body-texture);
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
 }
 
 /* Smooth scrolling */
@@ -10,7 +77,7 @@ html {
 
 /* Custom form focus styles */
 input:focus, textarea:focus {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px var(--color-focus);
   outline: none;
 }
 
@@ -51,8 +118,8 @@ button:hover {
   right: -100%;
   width: 75%;
   height: 100vh;
-  background: white;
-  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  background: var(--color-surface);
+  box-shadow: -2px 0 18px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease;
   z-index: 1000;
 }
@@ -64,12 +131,77 @@ button:hover {
 #mobile-menu a {
   display: block;
   padding: 1rem;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid var(--color-border);
   transition: background-color 0.2s ease;
 }
 
 #mobile-menu a:hover {
-  background-color: #f9fafb;
+  background-color: var(--color-highlight);
+}
+
+/* Tailwind color and shadow overrides */
+.bg-white {
+  background-color: var(--color-surface) !important;
+  background-image: var(--surface-texture);
+}
+
+.bg-gray-50 {
+  background-color: var(--color-bg) !important;
+}
+
+.text-gray-900,
+.text-gray-800,
+.text-gray-700 {
+  color: var(--color-text) !important;
+}
+
+.text-gray-600,
+.text-gray-500 {
+  color: var(--color-muted) !important;
+}
+
+.text-blue-600 {
+  color: var(--color-primary) !important;
+}
+
+.text-blue-800 {
+  color: var(--color-primary-strong) !important;
+}
+
+.border-blue-600 {
+  border-color: var(--color-primary) !important;
+}
+
+.border-gray-200 {
+  border-color: var(--color-border) !important;
+}
+
+.bg-blue-600 {
+  background-color: var(--color-primary) !important;
+}
+
+.hover\:text-blue-600:hover {
+  color: var(--color-primary-strong) !important;
+}
+
+.hover\:text-blue-800:hover {
+  color: var(--color-primary-strong) !important;
+}
+
+.hover\:bg-gray-50:hover {
+  background-color: var(--color-highlight) !important;
+}
+
+.hover\:bg-blue-50:hover {
+  background-color: var(--color-highlight) !important;
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-card) !important;
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-nav) !important;
 }
 
 @media (min-width: 768px) {

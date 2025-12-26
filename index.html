@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShowYourWeb - Cloud &amp; AI Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-50 flex flex-col min-h-screen">
   <!-- Navigation -->
-  <nav class="bg-white sticky top-0 z-50 shadow-xl">
+  <nav class="bg-white site-nav sticky top-0 z-50 shadow-xl">
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex justify-between">
         <div class="flex space-x-7">
           <a href="index.html" class="flex items-center py-4 px-2">
-            <span class="font-bold text-gray-700 text-xl">ShowYourWeb</span>
+            <span class="font-bold text-gray-700 text-xl site-brand">ShowYourWeb</span>
           </a>
         </div>
         <!-- Mobile menu button -->
@@ -59,63 +59,65 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="relative bg-cover bg-center text-white py-32"
-    style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative">
-      <div class="container mx-auto px-6 text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">Transforming Businesses with Cloud &amp; AI</h1>
-        <p class="text-xl mb-8">We deliver innovative solutions that drive digital transformation and business growth.
-        </p>
-        <a href="services.html"
-          class="bg-white text-blue-600 py-3 px-6 rounded-full font-bold hover:bg-blue-50 transition duration-300">Explore
-          Our Services</a>
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="relative bg-cover bg-center text-white py-32"
+      style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <div class="relative">
+        <div class="container mx-auto px-6 text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6">Transforming Businesses with Cloud &amp; AI</h1>
+          <p class="text-xl mb-8">We deliver innovative solutions that drive digital transformation and business growth.
+          </p>
+          <a href="services.html"
+            class="bg-white text-blue-600 py-3 px-6 rounded-full font-bold hover:bg-blue-50 transition duration-300 cta-button">Explore
+            Our Services</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Overview -->
-  <section id="services" class="py-20">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-16">Our Expertise</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-            </svg>
+    <!-- Services Overview -->
+    <section id="services" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Our Expertise</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-blue-600 mb-4">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
+            <p class="text-gray-600">Scalable, secure, and efficient cloud infrastructure tailored to your needs.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Cloud Solutions</h3>
-          <p class="text-gray-600">Scalable, secure, and efficient cloud infrastructure tailored to your needs.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-            </svg>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-blue-600 mb-4">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">AppSheet Development</h3>
+            <p class="text-gray-600">Custom no-code app development to streamline your business processes.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">AppSheet Development</h3>
-          <p class="text-gray-600">Custom no-code app development to streamline your business processes.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-              </path>
-            </svg>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="text-blue-600 mb-4">
+              <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
+            <p class="text-gray-600">Actionable insights from your data to drive better decisions.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Data Analytics</h3>
-          <p class="text-gray-600">Actionable insights from your data to drive better decisions.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-white border-t border-gray-200">
