@@ -19,152 +19,165 @@
   <meta name="twitter:description"
     content="Cloud migration, AppSheet development, data analytics, and managed services for growing teams.">
   <link rel="canonical" href="https://showyourweb.com/services.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-50">
+<body>
   <!-- Navigation -->
-  <nav class="bg-white site-nav sticky top-0 z-50 shadow-xl">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex justify-between">
-        <div class="flex space-x-7">
-          <a href="index.html" class="flex items-center py-4 px-2">
-            <img src="images/favicon.svg" alt="ShowYourWeb Logo" class="h-10 w-10 mr-2">
-            <span class="font-bold text-gray-700 text-xl site-brand">ShowYourWeb</span>
-          </a>
-        </div>
-        <!-- Mobile menu button -->
-        <div class="md:hidden flex items-center">
-          <button id="mobile-menu-button" class="outline-none mobile-menu-button">
-            <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Desktop menu -->
-        <div class="hidden md:flex items-center space-x-4">
-          <a href="index.html"
-            class="py-4 px-2 text-gray-700 font-bold text-lg hover:text-blue-600 transition duration-300">Home</a>
-          <a href="services.html"
-            class="py-4 px-2 text-blue-600 border-b-4 border-blue-600 font-bold text-lg">Services</a>
-          <a href="luxeplan.html"
-            class="py-4 px-2 text-gray-700 font-bold text-lg hover:text-blue-600 transition duration-300">Luxe Plan</a>
-          <a href="about.html"
-            class="py-4 px-2 text-gray-700 font-bold text-lg hover:text-blue-600 transition duration-300">About</a>
-        </div>
-      </div>
-
-      <!-- Mobile menu -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <a href="index.html"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Home</a>
-          <a href="services.html"
-            class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-gray-50">Services</a>
-          <a href="luxeplan.html"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Luxe
-            Plan</a>
-          <a href="about.html"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">About</a>
-        </div>
-      </div>
+  <header class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="images/favicon.svg" alt="" class="brand-mark">
+        <span class="brand-name">ShowYourWeb</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="is-active" aria-current="page">Services</a>
+        <a href="luxeplan.html">Luxe Plan</a>
+        <a href="about.html">About</a>
+      </nav>
+      <button id="mobile-menu-button" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    </div>
+  </header>
+
+  <div class="menu-backdrop" id="menu-backdrop"></div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="is-active" aria-current="page">Services</a>
+    <a href="luxeplan.html">Luxe Plan</a>
+    <a href="about.html">About</a>
+    <a href="mailto:info@showyourweb.com" class="menu-mail">info@showyourweb.com</a>
   </nav>
 
-  <!-- Services Section -->
-  <section class="py-20">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-4">Cloud Solutions</h3>
-          <p class="text-gray-600 mb-4">We provide end-to-end cloud services including:</p>
-          <ul class="list-disc list-inside text-gray-600 mb-6">
-            <li>Cloud migration strategy &amp; implementation</li>
-            <li>Cloud architecture design &amp; optimization</li>
-            <li>DevOps &amp; CI/CD pipeline setup</li>
-            <li>Cloud security &amp; compliance</li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-4">AppSheet Development</h3>
-          <p class="text-gray-600 mb-4">Our AppSheet services include:</p>
-          <ul class="list-disc list-inside text-gray-600 mb-6">
-            <li>Custom no-code app development</li>
-            <li>Workflow automation solutions</li>
-            <li>Data integration with Google Workspace</li>
-            <li>Mobile app deployment &amp; management</li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
-              </path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-4">Data Analytics</h3>
-          <p class="text-gray-600 mb-4">We help businesses make data-driven decisions through:</p>
-          <ul class="list-disc list-inside text-gray-600 mb-6">
-            <li>Data warehousing solutions</li>
-            <li>Business intelligence dashboards</li>
-            <li>Real-time data processing</li>
-            <li>Data visualization &amp; reporting</li>
-          </ul>
-        </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg">
-          <div class="text-blue-600 mb-4">
-            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-4">Managed Services</h3>
-          <p class="text-gray-600 mb-4">Our managed services include:</p>
-          <ul class="list-disc list-inside text-gray-600 mb-6">
-            <li>24/7 monitoring &amp; support</li>
-            <li>Performance optimization</li>
-            <li>Disaster recovery planning</li>
-            <li>Cost management &amp; optimization</li>
-          </ul>
+  <main>
+    <!-- Page header -->
+    <section class="page-head">
+      <div class="container reveal">
+        <p class="eyebrow">Services</p>
+        <h1>What we can build for you</h1>
+        <p class="section-lead">From first cloud migration to fully managed operations &mdash; end-to-end expertise for
+          every stage of your journey.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section">
+      <div class="container">
+        <div class="card-grid card-grid--2">
+          <article class="card reveal" id="cloud">
+            <div class="card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+              </svg>
+            </div>
+            <h3>Cloud Solutions</h3>
+            <p>We provide end-to-end cloud services including:</p>
+            <ul class="check-list">
+              <li>Cloud migration strategy &amp; implementation</li>
+              <li>Cloud architecture design &amp; optimization</li>
+              <li>DevOps &amp; CI/CD pipeline setup</li>
+              <li>Cloud security &amp; compliance</li>
+            </ul>
+          </article>
+          <article class="card reveal reveal-delay-1" id="appsheet">
+            <div class="card-icon card-icon--terra">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3>AppSheet Development</h3>
+            <p>Our AppSheet services include:</p>
+            <ul class="check-list">
+              <li>Custom no-code app development</li>
+              <li>Workflow automation solutions</li>
+              <li>Data integration with Google Workspace</li>
+              <li>Mobile app deployment &amp; management</li>
+            </ul>
+          </article>
+          <article class="card reveal" id="data">
+            <div class="card-icon">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3>Data Analytics</h3>
+            <p>We help businesses make data-driven decisions through:</p>
+            <ul class="check-list">
+              <li>Data warehousing solutions</li>
+              <li>Business intelligence dashboards</li>
+              <li>Real-time data processing</li>
+              <li>Data visualization &amp; reporting</li>
+            </ul>
+          </article>
+          <article class="card reveal reveal-delay-1" id="managed">
+            <div class="card-icon card-icon--terra">
+              <svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3>Managed Services</h3>
+            <p>Our managed services include:</p>
+            <ul class="check-list">
+              <li>24/7 monitoring &amp; support</li>
+              <li>Performance optimization</li>
+              <li>Disaster recovery planning</li>
+              <li>Cost management &amp; optimization</li>
+            </ul>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Not sure where to start?</h2>
+          <p>Tell us about your goals and we&rsquo;ll recommend the right mix of services for your team.</p>
+          <a href="mailto:info@showyourweb.com" class="btn btn-light">Start a conversation</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-t border-gray-200">
-    <div class="container mx-auto px-6 py-8">
-      <div class="flex flex-col items-center text-center">
-        <p class="text-gray-500">© <span id="copyright-year">2025</span> ShowYourWeb.com Inc. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="brand">
+          <img src="images/favicon.svg" alt="" class="brand-mark">
+          <span class="brand-name">ShowYourWeb</span>
+        </a>
+        <p>Cloud, AI, and data solutions that drive digital transformation and business growth.</p>
       </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="luxeplan.html">Luxe Plan</a>
+        <a href="about.html">About</a>
+      </nav>
+      <a href="mailto:info@showyourweb.com" class="footer-mail">info@showyourweb.com</a>
+    </div>
+    <div class="container footer-base">
+      &copy; <span id="copyright-year">2026</span> ShowYourWeb.com Inc. All rights reserved.
     </div>
   </footer>
+
   <script src="js/date.js"></script>
   <script src="js/menu.js"></script>
+  <script src="js/reveal.js"></script>
 </body>
 
 </html>
